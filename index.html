@@ -43,18 +43,18 @@
         }
 
         .logo-container i {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             color: var(--accent);
         }
 
         .logo-container img {
-            height: 55px;
+            height: 58px;
             width: auto;
             object-fit: contain;
         }
 
         .logo-text {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: white;
             letter-spacing: 1px;
@@ -62,7 +62,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2.2rem;
+            gap: 2rem;
             list-style: none;
         }
 
@@ -70,6 +70,7 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s;
         }
 
         .nav-links a:hover { color: var(--accent); }
@@ -77,7 +78,7 @@
         .cta-nav {
             background: var(--accent);
             color: white !important;
-            padding: 10px 24px;
+            padding: 10px 26px;
             border-radius: 50px;
             font-weight: 600;
         }
@@ -85,7 +86,7 @@
         /* Hero */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
                         url('https://source.unsplash.com/random/1920x1080/?kenya-safari') center/cover no-repeat;
             display: flex;
             align-items: center;
@@ -96,24 +97,24 @@
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4.8rem;
-            color: #fff;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            color: white;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
             margin-bottom: 1rem;
         }
 
         .hero-subtitle {
             font-size: 1.45rem;
             color: #ddd;
-            margin-bottom: 2.8rem;
+            margin-bottom: 2.5rem;
         }
 
         .btn-primary {
             background: var(--accent);
             color: white;
-            padding: 16px 38px;
+            padding: 16px 40px;
             border: none;
             border-radius: 50px;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
@@ -125,7 +126,7 @@
             box-shadow: 0 15px 35px rgba(255, 140, 0, 0.45);
         }
 
-        .section { padding: 120px 5%; }
+        .section { padding: 110px 5%; }
         .section-title {
             text-align: center;
             font-size: 3.2rem;
@@ -155,11 +156,6 @@
             width: 100%;
             height: 260px;
             object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .dest-card:hover img, .gallery-item:hover img {
-            transform: scale(1.08);
         }
 
         .dest-info {
@@ -167,7 +163,10 @@
             background: rgba(20,20,20,0.95);
         }
 
-        .dest-info h3 { color: var(--highlight); margin-bottom: 0.5rem; }
+        .dest-info h3 {
+            color: var(--highlight);
+            margin-bottom: 0.5rem;
+        }
 
         .booking-form {
             max-width: 900px;
@@ -193,7 +192,7 @@
 
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 15px;
+            padding: 15px 18px;
             border: none;
             border-radius: 12px;
             background: rgba(255,255,255,0.12);
@@ -227,7 +226,7 @@
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 3.4rem; }
             .form-row { grid-template-columns: 1fr; }
-            .nav-links { gap: 1.2rem; font-size: 0.95rem; }
+            .nav-links { gap: 1rem; font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -237,7 +236,7 @@
     <nav class="navbar">
         <div class="logo-container">
             <i class="fas fa-paw"></i>
-            <img src="/attachments/logo" alt="Panda Tours Logo">
+            <img src="/attachments/logo.jpeg" alt="Panda Tours Logo">
             <span class="logo-text">PANDA TOURS</span>
         </div>
         <ul class="nav-links">
@@ -257,10 +256,7 @@
         <div class="hero-content">
             <h1>RISE. EXPLORE. REPEAT.</h1>
             <p class="hero-subtitle">Epic Rift Valley adventures for the young & fearless</p>
-            <div class="hero-buttons">
-                <a href="#book" class="btn-primary btn-large">BOOK YOUR ADVENTURE NOW</a>
-                <a href="#destinations" class="btn-secondary">EXPLORE DESTINATIONS</a>
-            </div>
+            <a href="#book" class="btn-primary btn-large">BOOK YOUR ADVENTURE NOW</a>
         </div>
     </section>
 
@@ -305,14 +301,10 @@
         </div>
     </section>
 
-    <!-- Booking -->
-    <section id="book" class="section booking-section">
+    <!-- Booking Form -->
+    <section id="book" class="section">
         <div class="container">
-            <div class="booking-header">
-                <h2>READY FOR YOUR NEXT ADVENTURE?</h2>
-                <p>Fill this form and get custom package details + pricing on WhatsApp instantly</p>
-            </div>
-            
+            <h2 class="section-title">BOOK YOUR ADVENTURE</h2>
             <form id="booking-form" class="booking-form">
                 <div class="form-row">
                     <div class="form-group">
@@ -348,7 +340,7 @@
                         <input type="number" id="people" min="1" value="2" required>
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
+                        <label>Message (Optional)</label>
                         <textarea id="message" rows="3" placeholder="Any special requests?"></textarea>
                     </div>
                 </div>
@@ -370,11 +362,11 @@
                 <div class="gallery-item"><img src="/attachments/lake-nakuru.jpg.jpeg" alt="Lake Nakuru"></div>
                 <div class="gallery-item"><img src="/attachments/lord-egerton castle.jpg.jpeg" alt="Lord Egerton Castle"></div>
                 <div class="gallery-item"><img src="/attachments/lake elementaita.jpeg" alt="Lake Elementaita"></div>
-                <div class="gallery-item"><img src="/attachments/lake naivasha-2.jpeg" alt="Lion at Lake Naivasha"></div>
-                <div class="gallery-item"><img src="/attachments/lake-baringo-bogoria.jpeg" alt="Birds at Lake Baringo"></div>
-                <div class="gallery-item"><img src="/attachments/lake-nakuru 1.jpg.jpeg" alt="Flamingos at Lake Nakuru"></div>
-                <div class="gallery-item"><img src="/attachments/mt-longonot.jpeg" alt="Hikers on Mt Longonot"></div>
-                <div class="gallery-item"><img src="/attachments/lake-bogoria-baringo-5.jpeg" alt="Thatched Roof at Lake Baringo"></div>
+                <div class="gallery-item"><img src="/attachments/lake naivasha-2.jpeg" alt="Lake Naivasha Wildlife"></div>
+                <div class="gallery-item"><img src="/attachments/lake-baringo-bogoria.jpeg" alt="Lake Baringo Birds"></div>
+                <div class="gallery-item"><img src="/attachments/lake-nakuru 1.jpg.jpeg" alt="Flamingos"></div>
+                <div class="gallery-item"><img src="/attachments/mt-longonot.jpeg" alt="Mount Longonot Hiking"></div>
+                <div class="gallery-item"><img src="/attachments/lake-bogoria-baringo-5.jpeg" alt="Lake Baringo"></div>
                 <div class="gallery-item"><img src="/attachments/menengai-crater-2.jpeg" alt="Menengai Crater"></div>
             </div>
         </div>
@@ -382,7 +374,7 @@
 
     <!-- Floating WhatsApp -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/254743363625" target="_blank">
+        <a href="https://wa.me/254743363625" target="_blank" title="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -393,7 +385,7 @@
             document.body.classList.toggle('light');
         });
 
-        // WhatsApp Form
+        // WhatsApp Booking
         document.getElementById('booking-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
@@ -403,13 +395,13 @@
             const people = document.getElementById('people').value;
             const message = document.getElementById('message').value || "";
 
-            const text = `Hello PANDA TOURS!%0A%0AName: ${name}%0AEmail: ${email}%0ADestination: ${destination}%0ADate: ${date}%0APeople: ${people}%0AMessage: ${message}%0A%0APlease send me package details.`;
+            const text = `Hello PANDA TOURS!%0A%0AName: ${name}%0AEmail: ${email}%0ADestination: ${destination}%0ADate: ${date}%0APeople: ${people}%0AMessage: ${message}%0A%0APlease send me the package details and pricing.`;
 
             window.open(`https://wa.me/254743363625?text=${text}`, '_blank');
             this.reset();
         });
 
-        // Smooth Scroll
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 if (this.getAttribute('href') !== '#') {
