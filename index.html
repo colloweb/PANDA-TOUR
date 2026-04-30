@@ -22,7 +22,6 @@
             line-height: 1.7;
         }
 
-        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -43,96 +42,58 @@
         }
 
         .logo-container i {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: var(--accent);
         }
 
         .logo-container img {
-            height: 58px;
+            height: 55px;
             width: auto;
             object-fit: contain;
         }
 
         .logo-text {
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             font-weight: 700;
             color: white;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
         }
 
         .nav-links a {
             color: white;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
         }
-
-        .nav-links a:hover { color: var(--accent); }
 
         .cta-nav {
             background: var(--accent);
-            color: white !important;
-            padding: 10px 26px;
+            color: white;
+            padding: 10px 24px;
             border-radius: 50px;
             font-weight: 600;
         }
 
-        /* Hero */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                        url('https://source.unsplash.com/random/1920x1080/?kenya-safari') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x1080/?kenya-safari') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
 
-        .hero-content h1 {
+        .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4.8rem;
+            font-size: 4.5rem;
             color: white;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
-            margin-bottom: 1rem;
         }
 
-        .hero-subtitle {
-            font-size: 1.45rem;
-            color: #ddd;
-            margin-bottom: 2.5rem;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-            padding: 16px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.4s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(255, 140, 0, 0.45);
-        }
-
-        .section { padding: 110px 5%; }
-        .section-title {
-            text-align: center;
-            font-size: 3.2rem;
-            margin-bottom: 4rem;
-            color: var(--accent);
-            font-weight: 700;
+        .section { padding: 100px 5%; }
+        .section-title { 
+            font-size: 3rem; 
+            color: var(--accent); 
+            margin-bottom: 3rem; 
+            text-align: center; 
         }
 
         .destinations-grid, .gallery-grid {
@@ -142,61 +103,15 @@
         }
 
         .dest-card, .gallery-item {
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            transition: all 0.4s;
-        }
-
-        .dest-card:hover, .gallery-item:hover {
-            transform: translateY(-12px);
+            background: #1a1a1a;
         }
 
         .dest-card img, .gallery-item img {
             width: 100%;
             height: 260px;
             object-fit: cover;
-        }
-
-        .dest-info {
-            padding: 1.6rem;
-            background: rgba(20,20,20,0.95);
-        }
-
-        .dest-info h3 {
-            color: var(--highlight);
-            margin-bottom: 0.5rem;
-        }
-
-        .booking-form {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.08);
-            padding: 50px;
-            border-radius: 24px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 15px 18px;
-            border: none;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.12);
-            color: white;
         }
 
         .whatsapp-float {
@@ -207,209 +122,95 @@
         }
 
         .whatsapp-float a {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background: #25D366;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float a:hover {
-            transform: scale(1.15) rotate(10deg);
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3.4rem; }
-            .form-row { grid-template-columns: 1fr; }
-            .nav-links { gap: 1rem; font-size: 0.95rem; }
+            font-size: 2.3rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar with Logo + Panda Paw -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-container">
             <i class="fas fa-paw"></i>
-            <img src="/attachments/logo.jpeg" alt="Panda Tours Logo">
+            <img src="attachments/logo.jpeg" alt="Panda Tours Logo">
             <span class="logo-text">PANDA TOURS</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#destinations">DESTINATIONS</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#book" class="cta-nav">BOOK NOW</a></li>
-        </ul>
-        <button id="theme-toggle" class="theme-btn">
-            <i class="fas fa-moon"></i>
-        </button>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#book" class="cta-nav">Book Now</a>
+        </div>
     </nav>
 
     <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div>
             <h1>RISE. EXPLORE. REPEAT.</h1>
-            <p class="hero-subtitle">Epic Rift Valley adventures for the young & fearless</p>
-            <a href="#book" class="btn-primary btn-large">BOOK YOUR ADVENTURE NOW</a>
+            <p style="font-size:1.4rem; margin:20px 0;">Epic Rift Valley adventures for the young & fearless</p>
+            <a href="#book" class="btn-primary" style="margin-top:25px; display:inline-block;">BOOK YOUR ADVENTURE NOW</a>
         </div>
     </section>
 
     <!-- Destinations -->
     <section id="destinations" class="section">
-        <div class="container">
-            <h2 class="section-title">OUR DESTINATIONS</h2>
-            <div class="destinations-grid">
-                <div class="dest-card">
-                    <img src="/attachments/lake- baringo.jpg.jpeg" alt="Lake Baringo">
-                    <div class="dest-info"><h3>LAKES BARINGO & BOGORIA</h3><p>Hot springs, boat rides & bird paradise</p></div>
-                </div>
-                <div class="dest-card">
-                    <img src="/attachments/lake - naivasha.jpg.jpeg" alt="Lake Naivasha">
-                    <div class="dest-info"><h3>LAKE NAIVASHA</h3><p>Hippos, boat rides & fresh water escape</p></div>
-                </div>
-                <div class="dest-card">
-                    <img src="/attachments/mt -longonot.jpg.jpeg" alt="Mount Longonot">
-                    <div class="dest-info"><h3>MOUNT LONGONOT</h3><p>Volcano hike with breathtaking crater views</p></div>
-                </div>
-                <div class="dest-card">
-                    <img src="/attachments/lake-nakuru.jpg.jpeg" alt="Lake Nakuru">
-                    <div class="dest-info"><h3>LAKE NAKURU</h3><p>Rhinos, flamingos & unforgettable game drives</p></div>
-                </div>
-                <div class="dest-card">
-                    <img src="/attachments/lord-egerton castle.jpg.jpeg" alt="Lord Egerton Castle">
-                    <div class="dest-info"><h3>LORD EGERTON CASTLE</h3><p>Historic fortress with a legendary story</p></div>
-                </div>
-                <div class="dest-card">
-                    <img src="/attachments/lake elementaita.jpeg" alt="Lake Elementaita">
-                    <div class="dest-info"><h3>LAKE ELEMENTAITA</h3><p>Peaceful soda lake & scenic beauty</p></div>
-                </div>
+        <h2 class="section-title">OUR DESTINATIONS</h2>
+        <div class="destinations-grid">
+            <div class="dest-card">
+                <img src="attachments/lake- baringo.jpg.jpeg" alt="Lake Baringo">
+                <div class="dest-info"><h3>LAKES BARINGO & BOGORIA</h3><p>Hot springs, boat rides & bird paradise</p></div>
             </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">ABOUT PANDA TOURS</h2>
-            <p>We create unforgettable, youthful adventures across the Rift Valley. From hiking volcanoes to boat rides on ancient lakes and exploring historic castles — we bring energy, safety, and pure adventure to every trip.</p>
-        </div>
-    </section>
-
-    <!-- Booking Form -->
-    <section id="book" class="section">
-        <div class="container">
-            <h2 class="section-title">BOOK YOUR ADVENTURE</h2>
-            <form id="booking-form" class="booking-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" id="name" required placeholder="Your full name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="email" required placeholder="your@email.com">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Preferred Destination</label>
-                        <select id="destination" required>
-                            <option value="">Choose your adventure...</option>
-                            <option value="Lakes Baringo & Bogoria">Lakes Baringo & Bogoria</option>
-                            <option value="Lake Naivasha">Lake Naivasha</option>
-                            <option value="Mount Longonot">Mount Longonot</option>
-                            <option value="Lake Nakuru">Lake Nakuru</option>
-                            <option value="Lord Egerton Castle">Lord Egerton Castle</option>
-                            <option value="Lake Elementaita">Lake Elementaita</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Preferred Date</label>
-                        <input type="date" id="date" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Number of People</label>
-                        <input type="number" id="people" min="1" value="2" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Message (Optional)</label>
-                        <textarea id="message" rows="3" placeholder="Any special requests?"></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn-primary btn-large whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> SEND TO WHATSAPP
-                </button>
-            </form>
+            <div class="dest-card">
+                <img src="attachments/lake - naivasha.jpg.jpeg" alt="Lake Naivasha">
+                <div class="dest-info"><h3>LAKE NAIVASHA</h3><p>Hippos, boat rides & fresh water escape</p></div>
+            </div>
+            <div class="dest-card">
+                <img src="attachments/mt -longonot.jpg.jpeg" alt="Mount Longonot">
+                <div class="dest-info"><h3>MOUNT LONGONOT</h3><p>Volcano hike with breathtaking crater views</p></div>
+            </div>
+            <div class="dest-card">
+                <img src="attachments/lake-nakuru.jpg.jpeg" alt="Lake Nakuru">
+                <div class="dest-info"><h3>LAKE NAKURU</h3><p>Rhinos, flamingos & unforgettable game drives</p></div>
+            </div>
+            <div class="dest-card">
+                <img src="attachments/lord-egerton castle.jpg.jpeg" alt="Lord Egerton Castle">
+                <div class="dest-info"><h3>LORD EGERTON CASTLE</h3><p>Historic fortress with a legendary story</p></div>
+            </div>
+            <div class="dest-card">
+                <img src="attachments/lake elementaita.jpg" alt="Lake Elementaita">
+                <div class="dest-info"><h3>LAKE ELEMENTAITA</h3><p>Peaceful soda lake & scenic beauty</p></div>
+            </div>
         </div>
     </section>
 
     <!-- Gallery -->
-    <section id="gallery" class="section gallery-section">
-        <div class="container">
-            <h2 class="section-title">ADVENTURE GALLERY</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="/attachments/lake- baringo.jpg.jpeg" alt="Lake Baringo"></div>
-                <div class="gallery-item"><img src="/attachments/lake - naivasha.jpg.jpeg" alt="Lake Naivasha"></div>
-                <div class="gallery-item"><img src="/attachments/mt -longonot.jpg.jpeg" alt="Mount Longonot"></div>
-                <div class="gallery-item"><img src="/attachments/lake-nakuru.jpg.jpeg" alt="Lake Nakuru"></div>
-                <div class="gallery-item"><img src="/attachments/lord-egerton castle.jpg.jpeg" alt="Lord Egerton Castle"></div>
-                <div class="gallery-item"><img src="/attachments/lake elementaita.jpeg" alt="Lake Elementaita"></div>
-                <div class="gallery-item"><img src="/attachments/lake naivasha-2.jpeg" alt="Lake Naivasha Wildlife"></div>
-                <div class="gallery-item"><img src="/attachments/lake-baringo-bogoria.jpeg" alt="Lake Baringo Birds"></div>
-                <div class="gallery-item"><img src="/attachments/lake-nakuru 1.jpg.jpeg" alt="Flamingos"></div>
-                <div class="gallery-item"><img src="/attachments/mt-longonot.jpeg" alt="Mount Longonot Hiking"></div>
-                <div class="gallery-item"><img src="/attachments/lake-bogoria-baringo-5.jpeg" alt="Lake Baringo"></div>
-                <div class="gallery-item"><img src="/attachments/menengai-crater-2.jpeg" alt="Menengai Crater"></div>
-            </div>
+    <section id="gallery" class="section">
+        <h2 class="section-title">ADVENTURE GALLERY</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="attachments/lake naivasha-2.jpg" alt="Lake Naivasha"></div>
+            <div class="gallery-item"><img src="attachments/lake-baringo-bogoria.jpg" alt="Lake Baringo"></div>
+            <div class="gallery-item"><img src="attachments/lake-nakuru 1.jpg" alt="Flamingos"></div>
+            <div class="gallery-item"><img src="attachments/mt-longonot.jpg" alt="Mount Longonot"></div>
+            <div class="gallery-item"><img src="attachments/lake-bogoria-baringo-5.jpg" alt="Lake Baringo"></div>
+            <div class="gallery-item"><img src="attachments/menengai-crater-2.jpg" alt="Menengai Crater"></div>
         </div>
     </section>
 
     <!-- Floating WhatsApp -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/254743363625" target="_blank" title="Chat on WhatsApp">
+        <a href="https://wa.me/254743363625" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <script>
-        // Theme Toggle
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            document.body.classList.toggle('light');
-        });
-
-        // WhatsApp Booking
-        document.getElementById('booking-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const destination = document.getElementById('destination').value;
-            const date = document.getElementById('date').value;
-            const people = document.getElementById('people').value;
-            const message = document.getElementById('message').value || "";
-
-            const text = `Hello PANDA TOURS!%0A%0AName: ${name}%0AEmail: ${email}%0ADestination: ${destination}%0ADate: ${date}%0APeople: ${people}%0AMessage: ${message}%0A%0APlease send me the package details and pricing.`;
-
-            window.open(`https://wa.me/254743363625?text=${text}`, '_blank');
-            this.reset();
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
