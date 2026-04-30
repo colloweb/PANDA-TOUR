@@ -73,21 +73,43 @@
             font-weight: 600;
         }
 
+        /* Hero + About combined */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
                         url('https://source.unsplash.com/random/1920x1080/?kenya-safari') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
+            font-size: 4.6rem;
             color: white;
             margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
         }
 
         .section { padding: 100px 5%; }
@@ -149,18 +171,19 @@
         <div>
             <a href="#home">Home</a>
             <a href="#destinations">Destinations</a>
-            <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
             <a href="#book" class="cta-nav">Book Now</a>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero + About -->
     <section id="home" class="hero">
-        <div>
+        <div class="hero-content">
             <h1>RISE. EXPLORE. REPEAT.</h1>
-            <p style="font-size:1.4rem; margin:20px 0;">Epic Rift Valley adventures for the young & fearless</p>
-            <a href="#book" class="btn-primary" style="margin-top:25px; display:inline-block;">BOOK YOUR ADVENTURE NOW</a>
+            <p>Epic Rift Valley adventures for the young & fearless.<br>
+            From majestic lakes to volcanic craters and historic castles — we create unforgettable experiences.</p>
+            <a href="#book" class="btn-primary">BOOK YOUR ADVENTURE NOW</a>
         </div>
     </section>
 
@@ -208,6 +231,39 @@
         </div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">ABOUT PANDA TOURS</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                We create unforgettable, youthful adventures across the Rift Valley. 
+                From hiking volcanoes to boat rides on ancient lakes and exploring historic castles — 
+                we bring energy, safety, and pure adventure to every trip.
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="book" class="section">
+        <div class="container">
+            <h2 class="section-title">BOOK YOUR ADVENTURE</h2>
+            <form id="booking-form" style="max-width: 700px; margin: 0 auto; background: rgba(255,255,255,0.08); padding: 40px; border-radius: 20px;">
+                <input type="text" id="name" placeholder="Full Name" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none;">
+                <input type="email" id="email" placeholder="Email Address" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none;">
+                <select id="destination" required style="width:100%; padding:12px; margin:10px 0; border-radius:8px; border:none;">
+                    <option value="">Choose Destination...</option>
+                    <option value="Lakes Baringo & Bogoria">Lakes Baringo & Bogoria</option>
+                    <option value="Lake Naivasha">Lake Naivasha</option>
+                    <option value="Mount Longonot">Mount Longonot</option>
+                    <option value="Lake Nakuru">Lake Nakuru</option>
+                    <option value="Lord Egerton Castle">Lord Egerton Castle</option>
+                    <option value="Lake Elementaita">Lake Elementaita</option>
+                </select>
+                <button type="submit" class="btn-primary" style="width:100%; margin-top:20px;">SEND TO WHATSAPP</button>
+            </form>
+        </div>
+    </section>
+
     <!-- Floating WhatsApp -->
     <div class="whatsapp-float">
         <a href="https://wa.me/254743363625" target="_blank">
@@ -215,5 +271,12 @@
         </a>
     </div>
 
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Opening WhatsApp with your booking details...");
+            window.open('https://wa.me/254743363625', '_blank');
+        });
+    </script>
 </body>
 </html>
